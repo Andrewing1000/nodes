@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:nodes/home.dart';
+import 'home.dart';  // Assuming home.dart contains your RenderedBoard widget
 
-void main(){
-  return runApp(NodesApp());
+void main() {
+  runApp(NodesApp());
 }
 
-class NodesApp extends StatelessWidget{
-
-  const NodesApp({super.key});
-
+class NodesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RenderedBoard();
+    return MaterialApp(
+      title: 'Nodes App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: RenderedBoard(),
+    );
   }
 }
